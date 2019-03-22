@@ -1,6 +1,7 @@
 class HeroinesController < ApplicationController
   def index
     @heroines = Heroine.all
+    @power = Power.first
   end
 
   def show
