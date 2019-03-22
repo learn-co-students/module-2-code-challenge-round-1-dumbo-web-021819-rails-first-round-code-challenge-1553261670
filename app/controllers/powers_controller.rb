@@ -1,6 +1,6 @@
 class PowersController < ApplicationController
   before_action :get_power, only: [:show]
-  
+
   def index
     @powers = Power.all
   end

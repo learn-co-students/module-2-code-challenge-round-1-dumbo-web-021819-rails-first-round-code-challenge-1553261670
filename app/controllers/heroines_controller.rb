@@ -1,12 +1,11 @@
 class HeroinesController < ApplicationController
   before_action :get_heroine, only: [:show]
-  
+
   def index
     @heroines = Heroine.all
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @heroine = Heroine.new
@@ -21,16 +20,14 @@ class HeroinesController < ApplicationController
     end
   end
 
-  # def search
-  #   power = Power.find_by(name: params[:q].downcase)
-  #   byebug
-  #   if power.nil?
-  #     redirect_to heroines_path
-  #   else
-  #     @heroines = Heroine.where(power_id: power.id)
-  #     byebug
-  #   end
-  # end
+  def search
+    power = Power.find_by(name: params[:q])
+    if power.nil?
+      redirect_to heroines_path
+    else
+      @heroines = Heroine.where(power_id: power.id)
+    end
+  end
 
   private
 
