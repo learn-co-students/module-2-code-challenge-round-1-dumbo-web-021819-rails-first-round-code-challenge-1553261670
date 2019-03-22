@@ -34,6 +34,8 @@ Read through the instructions to get a sense of the scope of this code challenge
 
 3. The heroine show page should include the heroine's name (eg. Kamala Khan), her super name (eg. Ms. Marvel), and her power. The power should link to the power show page.  
 
+<%= link_to "#{@heroine.power.name}", @heroine.power_path%>
+
 4. The power show page should have its name and description.
 
 5. As a visitor to the website, I should be able to create a new heroine with her name and super name.
