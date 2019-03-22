@@ -1,0 +1,33 @@
+<h1>Create Heroine</h1>
+
+<% if @heroine.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@heroine.errors.count, "error") %></h2>
+
+    <ul>
+    <% @heroine.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<br>
+
+<%= form_for @heroine do |f| %>
+
+  <%= f.label :name, 'Name: ' %><br>
+  <%= f.text_field :name %><br><br>
+
+  <%= f.label :super_name, 'Super Name: ' %><br>
+  <%= f.text_field :super_name %><br><br>
+
+  <%= f.collection_select :power_id, Power.all, :id, :name, :prompt => 'Please select' %>
+
+  <%= f.submit %>
+
+<% end %>
+
+<br>
+
+<%= link_to "Heroine Index", heroines_path %>
