@@ -1,3 +1,3 @@
 <h1> <%= @heroine.super_name %></h1>
 <h2>Name: <%= @heroine.name %> </h2>
-<h2>Super Power: <%= link_to @heroine.power.name.split.map(&:capitalize).join(' ') , power_path %></h2>
+<h2>Super Power: <%= link_to @heroine.power.name.split.map(&:capitalize).join(' ') , power_path(@heroine.power) %></h2>
