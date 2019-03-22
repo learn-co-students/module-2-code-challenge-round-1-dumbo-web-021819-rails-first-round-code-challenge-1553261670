@@ -1,6 +1,12 @@
 Heroine.destroy_all
 Power.destroy_all
 
+
+
+# A heroines has one power
+# A power has many heroines
+
+# Hero >- Power
 powers = [
   {name:"super strength", description: "gives the wielder super-human strengths" },
   {name:"flight", description: "gives the wielder the ability to fly through the skies at supersonic speed" },
