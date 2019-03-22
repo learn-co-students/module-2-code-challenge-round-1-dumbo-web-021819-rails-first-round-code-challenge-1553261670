@@ -1,0 +1,7 @@
+powers
+heroines
+
+Heroine can have only one power
+power_id
+
+Powers has_many heroines
