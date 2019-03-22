@@ -14,8 +14,8 @@ class HeroinesController < ApplicationController
   end
 
   # Attempts to create a Heroine, checks validity
-  # using helper method in superclass and redirects
-  # to the appropiate route.
+  # using helper method in superclass and
+  # redirects to / renders the appropiate view.
   #
   # see: ApplicationController.redirect_by_validity
   def create
