@@ -5,7 +5,7 @@ class HeroinesController < ApplicationController
   before_action :get_heroine, only: :show
 
   def index
-    @heroines = Heroine.all
+      @heroines = Heroine.all
   end
 
   def new
@@ -32,6 +32,6 @@ class HeroinesController < ApplicationController
   end
 
   def heroine_params
-    params.require(:heroine).permit(:name, :super_name, :power_id)
+    params.require(:heroine).permit(:name, :super_name, :power_id, :power)
   end
 end
