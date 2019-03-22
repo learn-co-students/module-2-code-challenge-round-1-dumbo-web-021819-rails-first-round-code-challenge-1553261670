@@ -1,0 +1,11 @@
+<%= link_to "back", powers_path %>
+<h1><%= @power.name %></h1>
+
+<p><%= @power.description %></p>
+
+<h2>Heroines w/ <%= @power.name %></h2>
+<ul>
+	<% @power.heroines.each do |heroine| %>
+		<li> <%= link_to heroine.super_name, heroine %> </li>
+	<% end %>
+</ul>

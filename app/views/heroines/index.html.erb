@@ -1,9 +1,16 @@
-<h2>All Heroines</h2>
+<h2>Heroines</h2>
+<%= form_with method: :get, url: heroines_path do |form| %>
+	<%= form.label :search %>
+	<%= form.text_field :search %>
+	<%= form.submit "Filter By Power" %>
+<% end %>
+
+<%= link_to "Create a Heroine", new_heroine_path %>
 
 <ul>
   <% @heroines.each do |heroine| %>
     <li>
-      <%= heroine.super_name %>
+      <%= link_to heroine.super_name, heroine %>
     </li>
     <br>
   <% end %>
